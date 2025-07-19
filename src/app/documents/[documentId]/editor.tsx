@@ -10,6 +10,7 @@ import StarterKit from '@tiptap/starter-kit';
 import TaskItem from '@tiptap/extension-task-item';
 import TaskList from '@tiptap/extension-task-list';
 import Table from '@tiptap/extension-table';
+import Link from '@tiptap/extension-link';
 import FontFamily from '@tiptap/extension-font-family';
 import TextStyle from '@tiptap/extension-text-style';
 import TableCell from '@tiptap/extension-table-cell';
@@ -56,6 +57,11 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      Link.configure({
+        openOnClick: false,
+        autolink: true,
+        defaultProtocol: "https"
+      }),
       Highlight.configure({
         multicolor: true,
       }),
