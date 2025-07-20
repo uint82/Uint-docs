@@ -11,6 +11,7 @@ import TaskItem from '@tiptap/extension-task-item';
 import TaskList from '@tiptap/extension-task-list';
 import Table from '@tiptap/extension-table';
 import Link from '@tiptap/extension-link';
+import TextAlign from '@tiptap/extension-text-align';
 import FontFamily from '@tiptap/extension-font-family';
 import TextStyle from '@tiptap/extension-text-style';
 import TableCell from '@tiptap/extension-table-cell';
@@ -57,6 +58,9 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      TextAlign.configure({
+        types: ["heading", "paragraph"]
+      }),
       Link.configure({
         openOnClick: false,
         autolink: true,
