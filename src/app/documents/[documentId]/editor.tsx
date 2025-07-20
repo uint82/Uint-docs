@@ -1,6 +1,7 @@
 "use client";
 
 import { useEditorStore } from '@/store/use-editor-store';
+import { FontSizeExtension } from '@/extensions/font-size';
 
 import { useEditor, EditorContent } from '@tiptap/react';
 
@@ -58,6 +59,7 @@ export const Editor = () => {
     },
     extensions: [
       StarterKit,
+      FontSizeExtension,
       TextAlign.configure({
         types: ["heading", "paragraph"]
       }),
